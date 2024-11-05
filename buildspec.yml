@@ -1,24 +1,17 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      # No need for specific runtime versions for simple HTML deployment
-      # if you have a NodeJS or similar project, add version here
-    commands:
-      # You can add any installation or setup commands here, if needed
-      echo "No installation steps needed for simple HTML deployment."
 
   build:
     commands:
       # This could copy the `index.html` file to the appropriate build directory
       echo "Building the project"
-      mkdir -p /tmp/deploy
-      cp index.html /tmp/deploy
+  
+      cp index.html /var/www/html/latest/
 
 artifacts:
   files:
-    - '/tmp/deploy/index.html'
+    - '/var/www/html/latest/index.html'
 
   # Optionally, you can define the destination for the deployment artifact
   discard-paths: yes
