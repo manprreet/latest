@@ -6,7 +6,6 @@ phases:
       # Print a message indicating that the build is starting
       echo "Building the project"
       
-      # Create a temporary directory to store the file
       mkdir -p /tmp/deploy/latest/
 
       # Copy the index.html file to the temporary deployment directory
