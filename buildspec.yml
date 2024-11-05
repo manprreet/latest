@@ -1,17 +1,21 @@
 version: 0.2
 
 phases:
-
   build:
     commands:
-      # This could copy the `index.html` file to the appropriate build directory
+      # Print a message indicating that the build is starting
       echo "Building the project"
-  
-      cp index.html /var/www/html/latest/
+      
+      # Create a temporary directory to store the file
+      mkdir -p /tmp/deploy/latest/
+
+      # Copy the index.html file to the temporary deployment directory
+      cp index.html /tmp/deploy/latest/
 
 artifacts:
   files:
-    - '/var/www/html/latest/index.html'
-
-  # Optionally, you can define the destination for the deployment artifact
+    # Specify the artifact path where the file is located in the build environment
+    - '/tmp/deploy/latest/index.html'
+  
+  # Optionally, discard paths to only include the file without the directory structure
   discard-paths: yes
