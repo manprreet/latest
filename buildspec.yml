@@ -6,18 +6,13 @@ phases:
       # Print a message indicating that the build is starting
       echo "Building the project"
       
+      # Create the deployment folder
       mkdir -p /tmp/deploy/latest/
 
-   
+      # Copy index.html to the deployment folder
       cp index.html /tmp/deploy/latest/
 
 artifacts:
   files:
- 
     - '/tmp/deploy/latest/index.html'
-  
-
   discard-paths: yes
-  artifacts:
-   files:
-     - '**/
