@@ -1,7 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: s3://codepipeline-us-east-1-698083376215/cicd_latest/
+       
     destination: /var/www/html/latest/
 overwrite: true
 file_exists_behavior: OVERWRITE
