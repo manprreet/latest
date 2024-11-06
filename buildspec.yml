@@ -3,13 +3,13 @@ version: 0.2
 phases:
   build:
     commands:
-      # Print a message indicating that the build is starting
+     
       echo "Building the project"
       
-      # Create the deployment folder
+     
       mkdir -p /tmp/deploy/latest/
 
-      # Copy index.html to the deployment folder
+     
       cp index.html /tmp/deploy/latest/
 
 artifacts:
