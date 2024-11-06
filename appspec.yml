@@ -1,6 +1,11 @@
-version: 0.2
+version: 0.0
 os: linux
-
 files:
-  - source: index.html
-    destination: /var/www/html/latest/index.html
+  - source: /
+    destination: /var/www/html/latest/
+overwrite: true
+file_exists_behavior: OVERWRITE
+permissions:
+  - object: /var/www/html/latest/
+    owner: ubuntu
+    group: ubuntu
